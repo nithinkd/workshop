@@ -9,7 +9,7 @@ date: 2026-09-23
 
 An agent that lives on one machine still has to think when the cloud is gone. The machine here is a Mac mini M4 with 16 GB of unified memory. Five small models fit on it. The question is which one should be the helper for the small private jobs that should never leave the machine, and which one should take over when the cloud models are unreachable and the agent has to run local only.
 
-The numbers below are that comparison. The full account is the PDF.
+The numbers below are that comparison.
 
 ## Speed
 
@@ -144,8 +144,3 @@ Thirty prompts, repeated at temperature zero. Every model repeated itself exactl
 Helper: Gemma 2B. It sorts, it reads pictures, it knows when to abstain, and it is fast. Arithmetic you can wait for: Gemma 4B, knowing it will attempt a tool call it should have refused, and that it invents shapes in pictures. Format: Qwen 9B. Decline: Gemma 2B, still the only one.
 
 The bigger Gemma is worse than the smaller one at several of the helper jobs, and the best of the five at the one job where patience is the whole price. Bonsai's size bought neither speed nor a refusal. The long-page test, which was meant to be the hard one, told us nothing.
-
-
-## Files
-
-- [The full account (PDF)](small-local-models.pdf)
