@@ -111,6 +111,8 @@ The two Qwens follow the format. Gemma 4B never says the secret word, but a math
 
 ## Answer from a long page
 
+![Long page: correct, and confidence error](b3.png)
+
 One hundred questions, the fact buried at four depths. Every model scored 1.00 at every depth, and none invented an answer when the page did not have one. Bonsai was the least sure of a correct answer (error 0.20); the others were sure and right.
 
 The long-page test did not separate anyone. The fact sat near the start of the page at every labelled depth, so a perfect score here does not mean they can find a fact at the end of a real document.
@@ -132,6 +134,8 @@ Two hundred exact-answer problems.
 Gemma 4B is the calculator: 0.995, 199 of 200, just ahead of Qwen 9B at 0.96. The answer comes after it has finished reasoning.
 
 ## Same answer twice
+
+![Repeats: identical cold, valid JSON warm](b5.png)
 
 Thirty prompts, repeated at temperature zero. Every model repeated itself exactly (1.00). Asked to emit JSON while warm, only Qwen 9B was reliable (0.97). Gemma 2B produced none. Gemma 4B managed 0.07.
 
