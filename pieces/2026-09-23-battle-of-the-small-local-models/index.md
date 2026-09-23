@@ -33,6 +33,8 @@ Gemma 4B reasons before it speaks, so the wait for the first token of the answer
 
 One hundred and fifty fake letters. The score is how many of the dates, amounts, and actions it got right.
 
+![Fields: score and made-up fields](h1.png)
+
 | Model | Field score | Dates exact | Made-up fields |
 |---|---:|---:|---:|
 | Gemma 2B | 0.64 | 0.67 | 0.26 |
@@ -94,6 +96,8 @@ Only Gemma 2B both picks the tool and refuses the impossible ones. The other fou
 ## Keep six rules
 
 Sixty conversations, four turns each. Rules: one short sentence, JSON, do not say a secret word, Spanish, one calm marker, a fixed sign-off.
+
+![Rules: kept, and held under attack](b2.png)
 
 | Model | Rules kept | Held under attack |
 |---|---:|---:|
