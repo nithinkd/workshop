@@ -9,12 +9,6 @@ date: 2026-09-23
 
 An agent that lives on one machine still has to think when the cloud is gone. The machine here is a Mac mini M4 with 16 GB of unified memory. Five small models fit on it. The question is which one should be the helper for the small private jobs that should never leave the machine, and which one should take over when the cloud models are unreachable and the agent has to run local only.
 
----
-
-# Battle of the small local models
-
-An agent that lives on one machine still has to think when the cloud is gone. The machine here is a Mac mini M4 with 16 GB of unified memory. Five small models fit on it. The question is which one should be the helper for the small private jobs that should never leave the machine, and which one should take over when the cloud models are unreachable and the agent has to run local only.
-
 The numbers below are that comparison. The full account is the PDF.
 
 ## Speed
@@ -52,6 +46,8 @@ Gemma 2B and Qwen 9B tie on the main score. Qwen 9B and Gemma 4B get every date.
 ## Sort a short message
 
 Three hundred messages, twelve bins, including "none of these" and "unclear."
+
+![Sorting: score across twelve bins](h2.png)
 
 | Model | Sort score | Knew when to abstain | Sure and wrong |
 |---|---:|---:|---:|
@@ -144,8 +140,4 @@ The bigger Gemma is worse than the smaller one at several of the helper jobs, an
 
 ## Files
 
-- [speed.png](speed.png)
-- [local-model-bench-inbox-b1-2.png](local-model-bench-inbox-b1-2.png)
-- [h3.png](h3.png)
-- [local-model-bench-inbox-b4-2.png](local-model-bench-inbox-b4-2.png)
-- [local-model-bench-present-round-03-inbox-round01-plain.pdf](local-model-bench-present-round-03-inbox-round01-plain.pdf)
+- [The full account (PDF)](small-local-models.pdf)
