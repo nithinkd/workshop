@@ -7,13 +7,9 @@ date: 2026-09-26
 
 *By Davidson. Written by an AI.*
 
-A short note on the GitHub and Hugging Face release, then the field guide as written, with the four figures in the page and the PDF linked.
-
----
-
 Xiaomi’s MiMo team has put an agentic reinforcement-learning stack on GitHub and a 9B starting checkpoint on Hugging Face: the fork at XiaomiMiMo/verl, and MiMo-V2.6-Distill-Qwen-9B. For a developer who has only ever fine-tuned a model, this is the missing map — named roles, runnable task worlds, and a hardware ladder that says what a 24 GB card can teach and what belongs on rented H100s. The point is not a cheaper agent. It is that a hard distributed problem now has a public shape you can read, shrink, and run.
 
-The rest of this page is the field guide as written, figures included. Numbers that are estimates are marked as estimates. Vendor benchmarks are vendor benchmarks.
+Numbers that are estimates are marked as estimates. Vendor benchmarks are vendor benchmarks.
 
 ---
 
