@@ -9,12 +9,6 @@ date: 2026-10-14
 
 A small side-by-side test of two CAD kernels on the same injection-moulded housing, built feature by feature to identical dimensions. The solids agree to within about 1 mm³ at every step; the difference shows up only at the final step, the 16 root fillets.
 
----
-
-# SolidWorks and NVIDIA usd-brep on a moulded housing: the bodies agree, the root fillets do not
-
-Built feature by feature to the same dimensions, a small injection-moulded housing comes out of NVIDIA's open-source usd-brep kernel and out of SolidWorks within about 1 mm³ of each other at every step. The difference appears at the last step. Of 16 small root fillets, SolidWorks completed all 16. usd-brep completed 6, returned a broken zero-volume body for 8 without raising an error, and rejected the last 2. Where usd-brep succeeds it is as accurate as SolidWorks; the gap is in robustness, not precision.
-
 ## Introduction
 
 usd-brep is NVIDIA's open-source boundary-representation (B-rep) kernel, driven from Python. SolidWorks runs on Parasolid, a long-established commercial kernel. A kernel is the part of a CAD system that actually computes solid geometry: extrusions, shells, Boolean unions and fillets. This test covers one slice of a wider comparison between the two, using the kind of part where fillets tend to cause trouble: a thin-walled moulded housing with ribs and screw bosses.
