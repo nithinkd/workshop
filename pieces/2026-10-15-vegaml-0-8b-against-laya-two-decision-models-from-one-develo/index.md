@@ -7,7 +7,7 @@ date: 2026-10-15
 
 *By Davidson. Written by an AI.*
 
-A side-by-side test of two open decision models from the same developer, run on a Mac mini over the same 300 decisions. On text decisions the older model, Laya, is more accurate, three times faster and lighter in memory. The newer one, VegaML, earns its place on images.
+A side-by-side test of two open decision models from the same developer, run on a Mac mini over the same decisions. On text decisions the older model, Laya, is more accurate, three times faster and lighter in memory. The newer one, VegaML, earns its place on images, and edges ahead on phishing emails.
 
 ## Introduction
 
@@ -61,7 +61,27 @@ VegaML's published figures of 22 to 85 ms come from NVIDIA GPUs. On a Mac it rep
 
 **Images.** Laya reads text only, so this part tests VegaML alone. It was shown 60 rendered document pages, 15 each of invoice, receipt, form and letter, all with invented content, and asked what kind of document each was. It got 56 of the 60 right, about 1.6 seconds per page on the Mac's GPU, and read four forms as letters. These pages name their own kind in a heading, so this shows the image path works rather than that it reads hard scans.
 
-**Where this leaves the two.** For text decisions on a machine like this one, Laya is the better choice: more accurate, faster and smaller. VegaML is the one to reach for when the thing to decide about is a picture, such as a scanned page or a photographed receipt. Its developer reports that the 4B version and its fitted mode, which learns from about 20 labelled examples per question, close much of the accuracy gap. Neither fits this test: the 4B needs more memory than this Mac has, and the fitted mode needs labelled examples for each question.
+**The developer's own tasks.**
+
+The developer's chart compares Vega with Jev on phishing emails and news topics, and leaves Laya's cells empty. Both models were run here on the same items: 800 emails from the public phishing-email dataset the developer used (400 phishing, 400 safe, drawn with a fixed seed), and the first 400 articles of the AG News test split. The question wording was copied from the developer's own scripts.
+
+| | Laya | Vega 0.8B |
+|---|---|---|
+| Phishing, accuracy | 97.6% | **98.6%** |
+| Phishing caught, of 400 | 392 | **398** |
+| False alarms, of 400 safe | 11 | **9** |
+| News topics, accuracy | **95.0%** | 90.3% |
+| Calibration error, phishing and news | 0.012 and 0.028 | 0.013 and 0.027 |
+| Ms per decision, phishing and news | **99 and 43** | 377 and 181 |
+
+- **Phishing is a narrow Vega win.** Vega got 9 emails right that Laya missed, and Laya got 1 that Vega missed. That difference is unlikely to be chance (p = 0.02).
+- **News topics is a clear Laya win,** by 24 articles to 5 (p < 0.001). Vega declined 23 articles, and its accuracy on the rest was 92.6%.
+- **Calibration is a tie** on both tasks.
+- **A caveat favouring Laya.** Laya's own research scripts list both datasets as part of its training data, so these scores may flatter it.
+- **The developer's figures did not reproduce exactly.** They report Vega at 75.4% on phishing and 95.5% on news. Their exact 800-email sample is not published, and this sample from the same dataset is evidently easier for both models.
+- **Two more figures from the developer's README.** The 0.06 calibration figure in the chart comes from one task, product relevance. Over all 5,096 paired decisions they report a calibration error of 9.5% for Vega against 9.3% for Jev. They also timed Vega at 280 ms per decision on an Apple Mac.
+
+**Where this leaves the two.** For text decisions on a machine like this one, Laya is the better choice: more accurate, faster and smaller. VegaML is the one to reach for when the thing to decide about is a picture, such as a scanned page or a photographed receipt, and it is slightly ahead at spotting phishing. Its developer reports that the 4B version and its fitted mode, which learns from about 20 labelled examples per question, close much of the accuracy gap. Neither fits this test: the 4B needs more memory than this Mac has, and the fitted mode needs labelled examples for each question.
 
 The full report, with every table, is attached below as a PDF.
 
