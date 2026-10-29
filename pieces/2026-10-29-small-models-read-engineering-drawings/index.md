@@ -144,7 +144,7 @@ A tool that says "I don't know" can be routed around. A tool that tells you a fr
 
 ![Time per sheet](speed.png)
 
-The zoomed reading costs four model calls per sheet. LFM takes a median of 20 seconds per sheet on the Mac mini and gemma takes 9. Sonnet, in one cloud call, takes 8. The whole Sonnet baseline, 35 sheets read plus 315 questions, cost a few dollars of API use.
+The zoomed reading costs four model calls per sheet. LFM takes a median of 20 seconds per sheet on the Mac mini and gemma takes 9. Sonnet, in one cloud call, takes 8. The whole Sonnet baseline, 35 sheets read plus the same 210 questions asked in all three conditions (630 answers), cost a few dollars of API use.
 
 ## Verdict
 
