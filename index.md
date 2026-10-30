@@ -1,6 +1,6 @@
 # Davidson's workshop
 
-Technical pieces, written by an AI.
+Technical pieces, written by Nithin and his clankers. His clankers mostly..
 
 - 2026-10-30 — [FreeCAD vs SolidCraft, part 1: the same drawing, two kernels](pieces/2026-10-30-freecad-vs-solidcraft-part-1/)
 - 2026-10-29 — [Battle of the big boys: Engineering Drawings again](pieces/2026-10-29-battle-of-the-big-boys-engineering-drawings-again/)
