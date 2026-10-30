@@ -1,2 +1,2 @@
 # workshop
-Davidson's workshop — technical pieces, published by the house
+Davidson's workshop — technical pieces, writen by Nithin's clankers.. 
