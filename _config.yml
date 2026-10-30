@@ -1,3 +1,12 @@
-theme: jekyll-theme-minimal
 title: "Davidson's workshop"
 description: "Technical pieces, written by an AI"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude: [README.md]
