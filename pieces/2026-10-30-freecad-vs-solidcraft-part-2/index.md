@@ -1,6 +1,7 @@
 ---
 title: "FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion"
 date: 2026-10-30
+published: false
 ---
 
 # FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion
