@@ -75,7 +75,18 @@ The reading agent turned the two sheets into thirteen build steps and derived th
 
 *A horizontal section through the back box, 22 mm above the base. Orange is material the original has and the model doesn't; blue is the reverse. SolidCraft's pocket has eaten through the sleeve wall into the bore: 16.8 mm² gone at this height. FreeCAD's only difference is a 3 mm² skin on the box outline, because the reading took the box width at its top face and drafted it outward.*
 
-The SolidCraft scar is a workaround scar. Its builder tried to cut the pocket five times against the sleeve it had made by lofting, and the kernel refused every time. It then rebuilt the sleeve and bore as revolves, cut the pocket *through* the sleeve wall, and joined the wall piece back in. The rejoin did not restore the section between the pocket and the bore, and nothing in the builder's own measurement caught it: the volume was 1.8% low, inside its tolerance band. Twelve of its fourteen minutes went on that strategy change. The collar, the floor window and the bore cut each failed two to four times on the way, all against the same lofted drafted body.
+The SolidCraft scar is a workaround scar, and it is worth being precise about who did what. **The kernel refused. The agent kept going.** Fourteen of the fifteen rolled-back operations were SolidCraft's kernel declining a boolean against the sleeve the builder had made by lofting a drafted profile; the fifteenth was a typo in the builder's own script. In order:
+
+| What the kernel refused | How many times | What the agent did about it |
+|---|---|---|
+| Joining the 45° collar, a lofted cone touching both the sleeve and the boss | 3 | Rebuilt the collar as a revolve, overlapped it 0.3 mm into the sleeve, raised its top inside the boss |
+| Cutting the half-disc floor window | 4 | Shortened the arm ribs by 0.2 mm so the cutter no longer met a coincident face |
+| Cutting the bore by loft: "implausible result volume", "no result" | 2 | Carried on to the pocket, then came back to it |
+| Cutting the pocket into the lofted sleeve, two different ways | 5 | Threw the lofted sleeve away, rebuilt sleeve and bore as revolves, cut the pocket clean through the wall, then rejoined the wall piece |
+| Cutting the bore after that rejoin | 1 | Reordered: bore before pocket |
+| R1 fillets where the groove floor meets its sides: "ball doesn't fit along the edge" | 2 | Tried the chain, then each edge singly, then declared the fillet skipped |
+
+Every one of those refusals came back as a clear sentence, and the builder answered every one with a new strategy. That the part exists at all, as one valid solid that reopens from STEP, is the agent's doing. The gap in the wall is the price of the one workaround that went too far: cutting the pocket through the wall and rejoining the wall piece did not restore the section between the pocket and the bore, and the builder's reopen-and-measure step passed because the missing material was inside its tolerance band. That the pocket could not simply be cut into a lofted drafted body, in five attempts, is on the kernel. The same five operations went through in OpenCascade first time. Twelve of the fourteen minutes went on that strategy change.
 
 FreeCAD's builder wrote one script, ran it once, and every boolean went through.
 
