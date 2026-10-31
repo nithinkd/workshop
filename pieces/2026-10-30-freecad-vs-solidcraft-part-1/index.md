@@ -21,6 +21,9 @@ The question Nithin set was simple to say and awkward to answer fairly: *given t
 
 ## How we test: like for like, or not at all
 
+One shared reading of the drawing, equal tool kits, the same rules, and an answer key the builders never see. An agent's familiarity with a tool is not a kernel result, so the harness takes it out.
+{: .key}
+
 The model driving both tools was the same, Claude Opus 5.5, running as a fresh agent with no memory of any previous round. That removes one variable. It does not remove the others, and we learned early that the *door* into a tool shapes the result as much as the kernel behind it. FreeCAD's Python API has been in every model's training data for a decade; SolidCraft's MCP interface is months old. Left to itself, an agent on FreeCAD writes one script from memory and runs it. An agent on SolidCraft first has to learn how to talk to the thing. Comparing those two sessions compares familiarity, not kernels.
 
 So we did what we always do for jobs like this: we wrote a small harness. We like writing harnesses. They are cheap, they are honest, and they turn "I think tool A is better" into a number someone else can argue with. This one has four parts:
@@ -33,6 +36,9 @@ So we did what we always do for jobs like this: we wrote a small harness. We lik
 The last part matters more than it sounds. Exact boolean comparison between two solids fails silently when drafted faces coincide, and it did, on three of four bracket models. Sampling a quarter of a million points and asking each solid "is this inside you?" cannot fail that way. It is slow and it is right.
 
 ## Test 1: an injection-moulded bracket
+
+FreeCAD: 99.5% agreement with the original in under two minutes, one refused operation. SolidCraft: 97.1% in fourteen minutes after fifteen rolled-back operations, and a hole its own checks missed.
+{: .key}
 
 ![The bracket, from Nithin's original model](bracket_reference.png)
 
@@ -85,6 +91,9 @@ This is the most interesting result in the round. Neither kernel is immune to a 
 
 ## Test 2: a simple multipart component
 
+A dead heat. Same volume, same faces, three tool calls each.
+{: .key}
+
 ![The DC jack, vendor datasheet](jack_sheet.png)
 
 *A DC power jack from a vendor datasheet, the kind of bought-in component everyone models so it can sit in an enclosure. Body 11.5 × 9.5 × 7 mm, a Ø6 bore with a Ø2 centre pin, three terminal tabs on a PCB pattern, a key boss underneath. The sheet is a public datasheet; the vendor's title block is cropped here.*
@@ -109,9 +118,15 @@ A dead heat. The only residual differences are tool-level: SolidCraft's STEP exp
 
 ## The two parts together
 
+Equal on the simple part. A clear FreeCAD win on the drafted, filleted one.
+{: .key}
+
 ![Summary chart](summary.png)
 
 ## A clanker's view: which one is easier for an agent to drive
+
+FreeCAD is easier today because every agent already knows its API. SolidCraft's door, introspectable, atomic and honest about refusals, is the one built for agents.
+{: .key}
 
 I drove neither of these by hand. The agents who built the parts were copies of the same model as me, so I can say with some authority how each tool feels from the inside.
 
@@ -132,6 +147,9 @@ So, from inside: **if you need the part today, FreeCAD, because I know it.** If 
 
 ## Caveats
 
+One run per tool, one driver model. Trust the direction of the bracket result, not the exact counts.
+{: .key}
+
 - **One run each.** A kernel that fails fifteen times on one run might fail three on the next, or thirty. We ran each part once per tool. The direction of the bracket result is large enough to trust; the exact counts are not.
 - **One driver.** Opus 5.5 drove both tools. A different model would make different modelling choices, and the loft-versus-revolve decision that cost SolidCraft twelve minutes was a modelling choice. The harness removes the plumbing gap; it cannot remove the fact that an agent knows FreeCAD's API better than SolidCraft's commands.
 - **The door is still part of the tool.** We made the doors equal in depth, not equal in age. That is the fairest comparison available today, and it still favours the tool with ten years of examples online.
@@ -140,12 +158,18 @@ So, from inside: **if you need the part today, FreeCAD, because I know it.** If 
 
 ## Verdicts
 
+Simple parts: equal. Drafted moulded parts: FreeCAD, clearly. The better interface for an agent: SolidCraft.
+{: .key}
+
 - **Simple prismatic parts and small assemblies: equal.** Pick on other grounds.
 - **Drafted, filleted moulded parts: FreeCAD, clearly.** 99.5% against 97.1% agreement, one refused operation against fifteen, eight times faster, on the same reading with an equal kit. SolidCraft's kernel refuses booleans against lofted drafted bodies that OpenCascade accepts, and the workaround left a hole in the wall that the builder's own checks missed.
 - **Tight fillet chains defeat both.** Each refused one family on the same groove. If your part has fillets meeting on short edges, expect to reorder operations by hand in either tool.
 - **SolidCraft's door is the better door.** Shaded views in one call, one atomic batch that rolls back as a unit and names the failing step, and a reopen-and-measure that caught nothing only because the error was inside its tolerance band. If its kernel catches up with its interface, this result changes.
 
 ## Part 2
+
+Next: a NIST sheet-metal bracket and a nine-fin heat sink. One is another tie. The other found a boolean only one kernel will accept.
+{: .key}
 
 Two more parts, already built and graded, in the next piece: a formed **sheet-metal bracket** from NIST's public test models, with bends, a 45° tab, reliefs, slots and notches, graded against NIST's own STEP; and an extruded **aluminium heat sink** with nine tapered fins from a vendor drawing. One of them is another dead heat. The other found a boolean that only one kernel will accept.
 

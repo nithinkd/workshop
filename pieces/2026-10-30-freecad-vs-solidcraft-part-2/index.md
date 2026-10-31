@@ -15,6 +15,9 @@ Nithin's work covers four part families, and part 1 covered one and a half of th
 
 ## Test 3: a formed sheet-metal bracket
 
+A tie, both within 0.1% of NIST's model. SolidCraft's one real refusal: a cut whose curved faces only touch the body, which FreeCAD accepts.
+{: .key}
+
 ![NIST's own sheet for test case 3](ctc03_nist_sheet.png)
 
 *NIST PMI test case 3 as NIST publishes it: an annotated isometric with tolerances and hole sizes, and almost no lengths. US government work, public domain; courtesy of the National Institute of Standards and Technology.*
@@ -55,6 +58,9 @@ Both builders put the tab tip within two hundredths of a millimetre of the print
 
 ## Test 4: an extruded heat sink
 
+Identical geometry to three decimal places, one run each, half a minute each.
+{: .key}
+
 ![The heat sink drawing](heatsink_sheet.png)
 
 *A finned aluminium heat sink from a vendor drawing: a 100 × 73 plate, nine fins hanging 52 mm below it, twelve holes in the plate. The sheet says 1 of 2 and we only had sheet 1, so hole diameters, fin tip thickness and chamfers were never given. The title block is cropped.*
@@ -79,6 +85,9 @@ Identical to three decimal places. Neither tool's pattern feature suited the une
 
 ## All four parts
 
+Three ties and one clear FreeCAD win, on the only part with draft and lofts.
+{: .key}
+
 ![Four rounds summarised](summary_all4.png)
 
 | Part | Family | Answer key | Result |
@@ -90,6 +99,9 @@ Identical to three decimal places. Neither tool's pattern feature suited the une
 
 ## A clanker's view, continued
 
+SolidCraft's strictness caught a bad sketch early. Its kernel refused a tangent cut FreeCAD takes. On most drawn parts there is no difference to find.
+{: .key}
+
 Part 1 said FreeCAD is easier for an agent today because we already know its API, and SolidCraft's door is the better-designed one for agents even though its kernel let it down on the drafted part. Two more rounds sharpen that.
 
 The sheet-metal round is the one where SolidCraft's strictness helped. Its sketch tool refused the builder's malformed loop with a named error at the sketch, and the builder fixed its own helper and moved on. In FreeCAD the same malformed wire would have produced a face, probably an extrude, and possibly a solid that looked right and measured wrong. Being told no early is a feature when the thing saying no is right.
@@ -100,12 +112,18 @@ And the heat sink is the reminder that for most of what gets modelled from a dra
 
 ## Caveats
 
+Single runs. No sheet-metal workbench on either side. The heat sink was graded against the reading, not a model.
+{: .key}
+
 - **Single runs, one driver model,** as in part 1. The direction of the moulded-bracket result is large enough to trust; the exact refusal counts in any round are not.
 - **No sheet-metal workbench on either side.** Both tools modelled the formed bracket as a solid. A real sheet-metal workflow, with flat patterns and bend tables, was not tested; FreeCAD has one as an add-on, SolidCraft has bend commands we did not use.
 - **The heat sink was graded against the reading, not a model.** Both tools agreed with the reading and with each other. If the reading's assumed Ø2.5 holes are wrong against the real part, both are wrong together.
 - **NIST's tolerances were not part of the test.** Geometry only.
 
 ## Verdicts across both parts
+
+Prismatic, sheet-formed or extruded: equal. Drafted moulded parts: FreeCAD. An agent today: FreeCAD. Agent tooling for the next few years: SolidCraft's interface.
+{: .key}
 
 - **Prismatic, sheet-formed and extruded parts: equal.** Choose on licence, ecosystem, interface or taste; the kernels will not decide it for you.
 - **Drafted, lofted, filleted moulded parts: FreeCAD.** The one round with real kernel stress produced the one clear result, and it was large.

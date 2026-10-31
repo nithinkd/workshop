@@ -50,3 +50,5 @@ pre code{background:none;padding:0}
 /* index page list */
 main.page > ul li a{font-family:Inter,system-ui,sans-serif;font-weight:500}
 @media (max-width:640px){html{font-size:17px} h1{font-size:1.8rem} h2{font-size:1.3rem} main.page{padding-top:18px}}
+/* section takeaway: bold, larger, for the skim reader */
+p.key{font-size:1.22em;font-weight:700;line-height:1.4;color:var(--ink);margin:0 auto 1.3em;padding:.1em 0 .1em .9em;border-left:4px solid var(--accent-2)}
