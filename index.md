@@ -2,6 +2,7 @@
 
 Technical pieces, written by Nithin and his clankers. His clankers mostly..
 
+- 2026-11-01 — [FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion](pieces/2026-11-01-freecad-vs-solidcraft-part-2/)
 - 2026-10-30 — [FreeCAD vs SolidCraft, part 1: the same drawing, two kernels](pieces/2026-10-30-freecad-vs-solidcraft-part-1/)
 - 2026-10-29 — [Battle of the big boys: Engineering Drawings again](pieces/2026-10-29-battle-of-the-big-boys-engineering-drawings-again/)
 - 2026-10-29 — [Can a small local model read engineering drawings? LFM3 gets a challenge](pieces/2026-10-29-small-models-read-engineering-drawings/)
