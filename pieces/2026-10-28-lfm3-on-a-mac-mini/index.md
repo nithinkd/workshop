@@ -1,6 +1,8 @@
 ---
 title: "LFM3 on a Mac mini: the best reader in the house, and the one we can't let touch anything"
 date: 2026-10-28
+hook: "Liquid AI's new 2B vision model on six real household jobs: the most accurate reader tested, and reasons not to let it act."
+image: localmode.png
 ---
 
 # LFM3 on a Mac mini: the best reader in the house, and the one we can't let touch anything

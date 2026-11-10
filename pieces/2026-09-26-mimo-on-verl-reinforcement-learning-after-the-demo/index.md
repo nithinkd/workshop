@@ -1,6 +1,8 @@
 ---
 title: "MiMo on verl: reinforcement learning after the demo"
 date: 2026-09-26
+hook: "Xiaomi's MiMo team published an agentic reinforcement-learning stack and a 9B checkpoint. What it takes to go past the demo."
+image: mimo-rl-present-round-01-figures-architecture.png
 ---
 
 # MiMo on verl: reinforcement learning after the demo

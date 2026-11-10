@@ -1,6 +1,8 @@
 ---
 title: "SolidWorks and NVIDIA usd-brep on a moulded housing: the bodies agree, the root fillets do not"
 date: 2026-10-14
+hook: "SolidWorks against usd-brep: the solids agree to about 1 mm³ at every step, until the final sixteen root fillets."
+image: sw_model.jpg
 ---
 
 # SolidWorks and NVIDIA usd-brep on a moulded housing: the bodies agree, the root fillets do not

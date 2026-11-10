@@ -1,6 +1,8 @@
 ---
 title: "An Indian fine-tune of Qwen3.5-9B against the original, on a Mac mini"
 date: 2026-11-08
+hook: "An Indian post-train of Qwen3.5-9B against the original, on public benches and on real household jobs. A statistical tie."
+image: poster.png
 ---
 
 # An Indian fine-tune of Qwen3.5-9B against the original, on a Mac mini

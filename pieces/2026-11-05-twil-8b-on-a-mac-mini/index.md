@@ -1,6 +1,8 @@
 ---
 title: "TwIL-8B on a Mac mini: tidy with tools, too slow for the house"
 date: 2026-11-05
+hook: "Clean tool calls and no false claims, but 3.6 to 11 times slower than every incumbent on this Mac. No swap."
+image: poster.png
 ---
 
 # TwIL-8B on a Mac mini: tidy with tools, too slow for the house

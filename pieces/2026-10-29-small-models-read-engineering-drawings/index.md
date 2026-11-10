@@ -1,6 +1,8 @@
 ---
 title: "Can a small local model read engineering drawings? LFM3 gets a challenge"
 date: 2026-10-29
+hook: "A small local model can copy a drawing surprisingly well if shown it in pieces. It cannot yet understand one."
+image: confidence.png
 ---
 
 # Can a small local model read engineering drawings? LFM3 gets a challenge

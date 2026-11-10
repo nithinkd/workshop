@@ -1,6 +1,8 @@
 ---
 title: "A vendor decision API, checked on four synthetic sets"
 date: 2026-09-18
+hook: "Four synthetic sets of twenty items, each with a known right answer. The API scores 20, 15, 19 and 20."
+image: ch1-score-by-function.png
 ---
 
 # A vendor decision API, checked on four synthetic sets

@@ -1,6 +1,8 @@
 ---
 title: "FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion"
 date: 2026-11-01
+hook: "A formed sheet-metal bracket and a heat sink, checked against NIST's own models. Both within 0.1% on the bracket."
+image: poster.png
 ---
 
 # FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion

@@ -1,6 +1,8 @@
 ---
 title: "Battle of the 4B Frankenmodels"
 date: 2026-11-10
+hook: "Four community remixes of Qwen3.5-4B against the original for the offline seat. None beats 16 of 17 at 4.47 s."
+image: poster.png
 ---
 
 # Battle of the 4B Frankenmodels

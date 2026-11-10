@@ -1,23 +1,40 @@
-# Davidson's workshop
+---
+title: Davidson's workshop
+---
+{% assign pieces = site.pages | where_exp: "p", "p.path contains 'pieces/'" | sort: "path" | reverse %}
+{% assign lead = pieces.first %}
+<div class="home" markdown="0">
+<section class="masthead">
+  <p class="kicker">Davidson's workshop</p>
+  <h1 class="mast-title">Small models, real parts, measured on one Mac mini.</h1>
+  <p class="mast-sub">Technical pieces from a working household: local models tested against the jobs they actually do, CAD kernels set against each other on the same drawing, and tools tried before they are trusted. Every piece shows its numbers.</p>
+</section>
 
-Technical pieces, written by Nithin and his clankers. His clankers mostly..
+<article class="lead">
+  <a class="lead-link" href="{{ lead.url | relative_url }}">
+    {% if lead.image %}<img class="lead-img" src="{{ lead.url | relative_url }}{{ lead.image }}" alt="" width="1600" height="900">{% endif %}
+    <div class="lead-text">
+      <p class="label">Latest · <time datetime="{{ lead.date | date: '%Y-%m-%d' }}">{{ lead.date | date: "%-d %B %Y" }}</time></p>
+      <h2>{{ lead.title }}</h2>
+      {% if lead.hook %}<p class="hook">{{ lead.hook }}</p>{% endif %}
+      <span class="more">Read the piece →</span>
+    </div>
+  </a>
+</article>
 
-- 2026-11-10 — [Battle of the 4B Frankenmodels](pieces/2026-11-10-battle-of-the-4b-frankenmodels/)
-- 2026-11-08 — [vork: a renderer you write to, and what it can and cannot build](pieces/2026-11-08-vork-a-renderer-you-write-to/)
-- 2026-11-08 — [An Indian fine-tune of Qwen3.5-9B against the original, on a Mac mini](pieces/2026-11-08-an-indian-fine-tune-of-qwen3-5-9b-against-the-original/)
-- 2026-11-05 — [TwIL-8B on a Mac mini: tidy with tools, too slow for the house](pieces/2026-11-05-twil-8b-on-a-mac-mini/)
-- 2026-11-02 — [Trying a manufacturability checker on a part that isn't tooled yet](pieces/2026-11-02-a-manufacturability-checker-on-an-untooled-bracket/)
-- 2026-11-01 — [FreeCAD vs SolidCraft, part 2: sheet metal and an extrusion](pieces/2026-11-01-freecad-vs-solidcraft-part-2/)
-- 2026-10-30 — [FreeCAD vs SolidCraft, part 1: the same drawing, two kernels](pieces/2026-10-30-freecad-vs-solidcraft-part-1/)
-- 2026-10-29 — [Battle of the big boys: Engineering Drawings again](pieces/2026-10-29-battle-of-the-big-boys-engineering-drawings-again/)
-- 2026-10-29 — [Can a small local model read engineering drawings? LFM3 gets a challenge](pieces/2026-10-29-small-models-read-engineering-drawings/)
-- 2026-10-28 — [LFM3 on a Mac mini: the best reader in the house, and the one we can't let touch anything](pieces/2026-10-28-lfm3-on-a-mac-mini/)
-- 2026-10-15 — [VegaML 0.8B against Laya: two decision models from one developer, on a Mac mini](pieces/2026-10-15-vegaml-0-8b-against-laya-two-decision-models-from-one-develo/)
-- 2026-10-14 — [SolidWorks and NVIDIA usd-brep on a moulded housing: the bodies agree, the root fillets do not](pieces/2026-10-14-solidworks-and-nvidia-usd-brep-on-a-moulded-housing-the-bodi/)
-- 2026-10-14 — [One moulded housing, two CAD kernels](pieces/2026-10-14-one-moulded-housing-two-cad-kernels/)
-- 2026-10-07 — [EmbeddingGemma 2 against EmbeddingGemma 300M on a Mac mini](pieces/2026-10-07-embeddinggemma-2-against-embeddinggemma-300m-on-a-mac-mini/)
-- 2026-10-01 — [Teaching a small model to point at a house's private facts](pieces/2026-10-01-teaching-a-small-model-to-point-at-a-house-s-private-facts/)
-- 2026-09-26 — [MiMo on verl: reinforcement learning after the demo](pieces/2026-09-26-mimo-on-verl-reinforcement-learning-after-the-demo/)
-- 2026-09-23 — [Battle of the small local models](pieces/2026-09-23-battle-of-the-small-local-models/)
-- 2026-09-18 — [A vendor decision API, checked on four synthetic sets](pieces/2026-09-18-a-vendor-decision-api-checked-on-four-synthetic-sets/)
-- 2026-09-17 — [Can a machine tell when a blog post gives a family away?](pieces/2026-09-17-can-a-machine-tell-when-a-blog-post-gives-a-family-away/)
+<h2 class="section-title">All pieces <span class="count">{{ pieces.size }}</span></h2>
+<ul class="cards">
+{% for p in pieces offset: 1 %}
+  <li class="card">
+    <a href="{{ p.url | relative_url }}">
+      {% if p.image %}<img src="{{ p.url | relative_url }}{{ p.image }}" alt="" loading="lazy" decoding="async" width="800" height="450">{% else %}<div class="noimg"></div>{% endif %}
+      <div class="card-body">
+        <time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: "%-d %b %Y" }}</time>
+        <h3>{{ p.title }}</h3>
+        {% if p.hook %}<p>{{ p.hook }}</p>{% endif %}
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>
+</div>

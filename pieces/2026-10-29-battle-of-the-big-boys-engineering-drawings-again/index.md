@@ -1,6 +1,8 @@
 ---
 title: "Battle of the big boys: Engineering Drawings again"
 date: 2026-10-29
+hook: "Three more large models take the same engineering-drawing test, with Sonnet's scores kept as the baseline."
+image: confidence.png
 ---
 
 # Battle of the big boys: Engineering Drawings again

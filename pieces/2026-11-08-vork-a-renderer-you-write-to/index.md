@@ -1,6 +1,8 @@
 ---
 title: "vork: a renderer you write to, and what it can and cannot build"
 date: 2026-11-08
+hook: "A headless GPU renderer you drive with a JSON scene: write, render, look, revise. What it can build, and what it cannot."
+image: poster.png
 ---
 
 # vork: a renderer you write to, and what it can and cannot build

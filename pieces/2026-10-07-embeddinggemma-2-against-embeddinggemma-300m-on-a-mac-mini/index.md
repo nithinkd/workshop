@@ -1,6 +1,8 @@
 ---
 title: "EmbeddingGemma 2 against EmbeddingGemma 300M on a Mac mini"
 date: 2026-10-07
+hook: "Does Google's new embedding model find the right note more often, and what does it cost? 858 notes, forty questions, one Mac mini."
+image: rank1-hits.png
 ---
 
 # EmbeddingGemma 2 against EmbeddingGemma 300M on a Mac mini

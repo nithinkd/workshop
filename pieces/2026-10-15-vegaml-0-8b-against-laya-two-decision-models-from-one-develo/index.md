@@ -1,6 +1,8 @@
 ---
 title: "VegaML 0.8B against Laya: two decision models from one developer, on a Mac mini"
 date: 2026-10-15
+hook: "Two decision models from one developer. On text, the older Laya is more accurate, three times faster and lighter in memory."
+image: vega-accuracy.png
 ---
 
 # VegaML 0.8B against Laya: two decision models from one developer, on a Mac mini

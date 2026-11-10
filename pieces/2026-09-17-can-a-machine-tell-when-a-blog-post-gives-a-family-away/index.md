@@ -1,6 +1,8 @@
 ---
 title: "Can a machine tell when a blog post gives a family away?"
 date: 2026-09-17
+hook: "Two harmless passages, read together, can point at one household. Four automated judges and one plain rule try to catch it across 320 invented passages."
+image: chart-1-accuracy-by-tag.png
 ---
 
 # Can a machine tell when a blog post gives a family away?

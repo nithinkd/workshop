@@ -1,6 +1,8 @@
 ---
 title: "Teaching a small model to point at a house's private facts"
 date: 2026-10-01
+hook: "A house that talks to outside services needs a valve: a small model that points at names, addresses and health details before text goes anywhere."
+image: valve-finder-charts-present-chart-compare.png
 ---
 
 # Teaching a small model to point at a house's private facts

@@ -1,6 +1,8 @@
 ---
 title: "FreeCAD vs SolidCraft, part 1: the same drawing, two kernels"
 date: 2026-10-30
+hook: "Same drawing, two kernels. Simple parts: equal. Drafted moulded parts: FreeCAD, clearly. The better interface for an agent: SolidCraft."
+image: poster.png
 ---
 
 # FreeCAD vs SolidCraft, part 1: the same drawing, two kernels

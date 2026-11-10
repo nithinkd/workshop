@@ -1,6 +1,8 @@
 ---
 title: "Battle of the small local models"
 date: 2026-09-23
+hook: "Five small models that fit on a 16 GB Mac mini, tested for the private jobs that should never leave the machine."
+image: b1.png
 ---
 
 # Battle of the small local models

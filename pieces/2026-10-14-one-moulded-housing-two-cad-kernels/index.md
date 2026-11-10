@@ -1,6 +1,8 @@
 ---
 title: "One moulded housing, two CAD kernels"
 date: 2026-10-14
+hook: "One injection-moulded housing, built feature by feature in two CAD engines. The bodies agree closely; the sixteen root fillets are where they part."
+image: freecad-body.png
 ---
 
 # One moulded housing, two CAD kernels

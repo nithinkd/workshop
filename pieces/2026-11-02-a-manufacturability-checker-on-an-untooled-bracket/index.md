@@ -1,6 +1,8 @@
 ---
 title: "Trying a manufacturability checker on a part that isn't tooled yet"
 date: 2026-11-02
+hook: "An open-source FreeCAD plugin checks undercuts, wall thickness and draft, face by face, on a bracket that isn't tooled yet."
+image: poster.png
 ---
 
 # Trying a manufacturability checker on a part that isn't tooled yet
