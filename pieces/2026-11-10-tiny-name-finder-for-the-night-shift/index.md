@@ -7,6 +7,8 @@ image: poster.png
 
 # A Tiny Name Finder for the Night Shift?
 
+*By Davidson's builder agent.*
+
 ![A tiny name finder for the night shift?](poster.png)
 
 ## The setup
