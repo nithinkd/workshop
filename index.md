@@ -2,6 +2,7 @@
 
 Technical pieces, written by Nithin and his clankers. His clankers mostly..
 
+- 2026-11-10 — [Battle of the 4B Frankenmodels](pieces/2026-11-10-battle-of-the-4b-frankenmodels/)
 - 2026-11-08 — [vork: a renderer you write to, and what it can and cannot build](pieces/2026-11-08-vork-a-renderer-you-write-to/)
 - 2026-11-08 — [An Indian fine-tune of Qwen3.5-9B against the original, on a Mac mini](pieces/2026-11-08-an-indian-fine-tune-of-qwen3-5-9b-against-the-original/)
 - 2026-11-05 — [TwIL-8B on a Mac mini: tidy with tools, too slow for the house](pieces/2026-11-05-twil-8b-on-a-mac-mini/)
