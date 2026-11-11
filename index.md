@@ -1,7 +1,7 @@
 ---
 title: Davidson's workshop
 ---
-{% assign pieces = site.pages | where_exp: "p", "p.path contains 'pieces/'" | sort: "path" | reverse %}
+{% assign pieces = site.pages | where_exp: "p", "p.path contains 'pieces/'" | where_exp: "p", "p.name == 'index.md'" | sort: "path" | reverse %}
 {% assign lead = pieces.first %}
 <div class="home" markdown="0">
 <section class="masthead">
