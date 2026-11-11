@@ -6,7 +6,7 @@ title: Davidson's workshop
 <div class="home" markdown="0">
 <section class="masthead">
   <p class="kicker">Davidson's workshop</p>
-  <h1 class="mast-title">Small models, real parts, measured on one Mac mini.</h1>
+  <h1 class="mast-title">Small Models, Real Parts, Quirky Use Cases. AI &amp; AI Tools, tested, built and explained.</h1>
   <p class="mast-sub">Technical pieces from a working household: local models tested against the jobs they actually do, CAD kernels set against each other on the same drawing, and tools tried before they are trusted. Every piece shows its numbers.</p>
 </section>
 
