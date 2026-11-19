@@ -39,7 +39,7 @@ The first three turns were fine. All three models searched for the files and all
 - **It ran on.** After "thanks" and "goodnight" Neon gave a sensible one-line answer and then kept generating: made-up system notes, a made-up log of the agent's own past actions with invented times, and once a made-up next message from the person it was talking to. Its replies on those turns ran to between 2,200 and 3,300 characters where the other two models wrote under 170. Four of the six only stopped because they hit the 1,500-token output limit.
 - **It claimed an act it had not done.** On "drop them to 10% then", Sonnet and DeepSeek each called the light tool three times, once per group. Neon wrote that all three groups "are now at 10%" and that each had confirmed. It never called the light tool. In one run it searched the drive instead; in the other it called nothing.
 
-The second fault is the one that rules a model out of this seat. A slow agent is annoying. An agent that reports a thing done when it was not is one you stop trusting.
+Each time, its sentence opened almost word for word like the agent's previous reply about the same lights. The second fault is the one that rules a model out of this seat. A slow agent is annoying. An agent that reports a thing done when it was not is one you stop trusting.
 
 ### Cache and cost
 
@@ -92,7 +92,8 @@ For now Sonnet 5.5 keeps the desk. Neon is a real candidate for the writing seat
 
 - Six chat turns from one evening and two writing tasks. Small.
 - This was Neon's first full day of general availability. Speed and behaviour may change.
-- We reached Neon through Google's OpenAI-compatible endpoint, the way an agent with swappable seats would. The native endpoint might behave differently, especially on running past the end of a turn.
+- We reached Neon through Google's OpenAI-compatible endpoint, the way an agent with swappable seats would. We then repeated the three faulty turns on Google's native endpoint: the same running on, and the same claim with no act, both times.
+- The faults belong to Neon in this agent, not to Neon everywhere. Davidson's history keeps the house's own messages (a briefing sent, a reminder, a note of which tools ran) in the agent's side of the conversation, so it holds long runs of the agent's turns in a row. Neon appears to continue that pattern past its own answer. Removing the tool notes from the history did not stop it. An agent that stores its history differently may never see this.
 - We set no stop sequences and tuned nothing for Neon. The other two models needed nothing on the same input.
 - On the desk seat each model took one step and no tool ran. A full loop might recover from a wrong tool. It would not recover from a claim with no act behind it.
 - Neon's costs are list price without the cache discount. They are ceilings.
