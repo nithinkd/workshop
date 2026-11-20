@@ -17,7 +17,7 @@ header.site{max-width:var(--wide);margin:0 auto;padding:22px 16px 10px;display:f
 header.site .brand{font-family:Inter,system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none;letter-spacing:.01em}
 header.site .yt{margin-left:auto;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:.85rem;color:#c4302b;text-decoration:none}
 header.site .yt:hover{text-decoration:underline}
-.mast-yt a{font-family:Inter,system-ui,sans-serif;font-weight:600;color:#c4302b;text-decoration:none}
+.home .masthead .mast-yt a{margin-top:6px;display:inline-block;font-family:Inter,system-ui,sans-serif;font-weight:600;color:#c4302b;text-decoration:none}
 header.site .tag{font-family:Inter,system-ui,sans-serif;font-size:.85rem;color:var(--muted)}
 footer.site{max-width:var(--wide);margin:60px auto 40px;padding:18px 16px 0;border-top:1px solid var(--rule);font-family:Inter,system-ui,sans-serif;font-size:.85rem;color:var(--muted)}
 main.page{max-width:var(--wide);margin:0 auto;padding:28px 16px 0}
